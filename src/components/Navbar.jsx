@@ -4,10 +4,11 @@ import {close, logo, menu} from "../assets";
 import {navLinks} from "../constans";
 
 const Navbar = () => {
-  const [toggle, settoggle] = useState(false);
+  const [toggle, settoggle] = useState(() => {
+    return false;
+  });
 
   const clickHandelr = () => {
-    console.log(toggle);
     settoggle((prev) => !prev);
   };
 
